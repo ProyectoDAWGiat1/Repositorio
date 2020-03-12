@@ -13,6 +13,11 @@
 
 <AnchorPane fx:id="fondo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@../styles/estiloPrueba.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pruebaproyecto.ProyectoGIATController">
    <children>
+      <ImageView fitHeight="617.0" fitWidth="808.0" layoutX="-4.0" layoutY="-14.0">
+         <image>
+            <Image url="@../images/fondo.jpg" />
+         </image>
+      </ImageView>
       <Pane fx:id="menuInicio" layoutX="14.0" prefHeight="600.0" prefWidth="209.0">
          <children>
             <TextField fx:id="emailInput" layoutX="29.0" layoutY="233.0" />
