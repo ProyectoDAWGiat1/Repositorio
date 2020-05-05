@@ -63,7 +63,6 @@ public class ProyectoGIATController implements Initializable {
 
     @FXML
     private void pruebaCambioVentanas(javafx.event.ActionEvent event) throws Exception{
-        Stage stage;
         try {
             FXMLLoader loader = new FXMLLoader();
             //CARGAMOS OTRO FXML
@@ -71,7 +70,7 @@ public class ProyectoGIATController implements Initializable {
             Parent root = loader.load(); // el metodo initialize() se ejecuta
 
             Stage escenarioVentana = (Stage) iniciarSesion.getScene().getWindow();
-            escenarioVentana.setTitle("Otra escena");
+            escenarioVentana.setTitle("Menú inicio");
             //CARGAMOS OTRA ESCENA(fxml) EN ESTA MISMA VENTANA
             escenarioVentana.setScene(new Scene(root));
         } catch (IOException ex) {
