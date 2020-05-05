@@ -67,7 +67,7 @@ public class ProyectoGIATController implements Initializable {
         try {
             FXMLLoader loader = new FXMLLoader();
             //CARGAMOS OTRO FXML
-            loader.setLocation(getClass().getResource("..\\scenes\\MenuInicioIniciado.fxml"));
+            loader.setLocation(getClass().getResource("/scenes/MenuInicioIniciado.fxml"));
             Parent root = loader.load(); // el metodo initialize() se ejecuta
 
             Stage escenarioVentana = (Stage) iniciarSesion.getScene().getWindow();
