@@ -51,21 +51,8 @@ public class ProyectoGIATController implements Initializable {
     /**
      * Initializes the controller class.
      */
-    private void handleButtonAction(ActionEvent event) throws Exception {
-        Stage stage;
-        Parent root;
+    private void pruebaCambioVentanas(ActionEvent event) throws Exception {
         
-        if(event.getSource()==iniciarSesion){
-            stage = (Stage) iniciarSesion.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("E:/Cosmin DAW-1/ProyectoGuideMAD/PruebaProyecto/src/scenes/MenuInicioIniciado.fxml"));
-        }
-        else{
-            stage = (Stage) iniciarSesion.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
-        }
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
     }
 
     @Override
@@ -74,7 +61,21 @@ public class ProyectoGIATController implements Initializable {
     }
 
     @FXML
-    private void handleButtonAction(javafx.event.ActionEvent event) {
+    private void pruebaCambioVentanas(javafx.event.ActionEvent event) throws Exception{
+        Stage stage;
+        Parent root;
+        
+        if(event.getSource()==iniciarSesion){
+            stage = (Stage) iniciarSesion.getScene().getWindow();
+            root = FXMLLoader.load(getClass().getResource("./scenes/MenuInicioIniciado.fxml"));
+        }
+        else{
+            stage = (Stage) iniciarSesion.getScene().getWindow();
+            root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+        }
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
 }
