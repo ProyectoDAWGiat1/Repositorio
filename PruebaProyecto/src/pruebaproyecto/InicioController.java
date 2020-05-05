@@ -31,8 +31,15 @@ public class InicioController {
     @FXML
     private Button botonMiPerfil;
     @FXML
-    private Label textoBienvenida;
-    @FXML
     private ImageView fotoLogo;
+    @FXML
+    private Label textUser;
     
+    private ProyectoGIATController pg = new ProyectoGIATController();
+
+    private void initialize(){
+        String user = pg.getNombre();
+        textUser.setText(textUser.getText()+" "+user);
+    }
+
 }
