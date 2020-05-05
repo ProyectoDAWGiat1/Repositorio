@@ -29,15 +29,15 @@
             <Button fx:id="botonMiPerfil" mnemonicParsing="false" prefHeight="129.0" prefWidth="217.0" text="Mi perfil" GridPane.columnIndex="3" />
          </children>
       </GridPane>
-      <Label fx:id="textoBienvenida" layoutX="194.0" layoutY="118.0" prefHeight="85.0" prefWidth="476.0" text="BIENVENIDO A">
-         <font>
-            <Font name="Source Sans Pro ExtraLight Italic" size="72.0" />
-         </font>
-      </Label>
       <ImageView fx:id="fotoLogo" fitHeight="145.0" fitWidth="160.0" layoutX="328.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/logo.png" />
          </image>
       </ImageView>
+      <Label fx:id="textUser" layoutX="14.0" layoutY="14.0" prefHeight="51.0" prefWidth="230.0" text="BIENVENIDO">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

@@ -80,5 +80,13 @@ public class ProyectoGIATController implements Initializable {
         }
 
     }
+    
+    public String getNombre(){
+        String nombre;
+        
+        nombre = textoEmail.getText();
+        
+        return nombre;
+    }
 
 }
