@@ -14,6 +14,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -63,19 +64,22 @@ public class ProyectoGIATController implements Initializable {
     @FXML
     private void pruebaCambioVentanas(javafx.event.ActionEvent event) throws Exception{
         Stage stage;
-        Parent root;
-        
-        if(event.getSource()==iniciarSesion){
-            stage = (Stage) iniciarSesion.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("E:\\Cosmin DAW-1\\ProyectoGuideMAD\\PruebaProyecto\\src\\scenes\\MenuInicioIniciado.fxml"));
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            //CARGAMOS OTRO FXML
+            loader.setLocation(getClass().getResource("..\\scenes\\MenuInicioIniciado.fxml"));
+            Parent root = loader.load(); // el metodo initialize() se ejecuta
+
+            Stage escenarioVentana = (Stage) iniciarSesion.getScene().getWindow();
+            escenarioVentana.setTitle("Otra escena");
+            //CARGAMOS OTRA ESCENA(fxml) EN ESTA MISMA VENTANA
+            escenarioVentana.setScene(new Scene(root));
+        } catch (IOException ex) {
+            Alert alerta = new Alert(Alert.AlertType.ERROR);
+            alerta.setContentText("ERROR " + ex.getMessage());
+            alerta.showAndWait();
         }
-        else{
-            stage = (Stage) iniciarSesion.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
-        }
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+
     }
 
 }
