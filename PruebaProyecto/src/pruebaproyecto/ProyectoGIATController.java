@@ -67,7 +67,7 @@ public class ProyectoGIATController implements Initializable {
         
         if(event.getSource()==iniciarSesion){
             stage = (Stage) iniciarSesion.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("./scenes/MenuInicioIniciado.fxml"));
+            root = FXMLLoader.load(getClass().getResource("E:\\Cosmin DAW-1\\ProyectoGuideMAD\\PruebaProyecto\\src\\scenes\\MenuInicioIniciado.fxml"));
         }
         else{
             stage = (Stage) iniciarSesion.getScene().getWindow();
