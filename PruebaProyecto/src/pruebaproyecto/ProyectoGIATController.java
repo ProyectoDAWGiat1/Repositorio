@@ -52,9 +52,6 @@ public class ProyectoGIATController implements Initializable {
     /**
      * Initializes the controller class.
      */
-    private void pruebaCambioVentanas(ActionEvent event) throws Exception {
-        
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -83,7 +80,7 @@ public class ProyectoGIATController implements Initializable {
     
     public String getNombre(){
         String nombre;
-        
+
         nombre = textoEmail.getText();
         
         return nombre;
