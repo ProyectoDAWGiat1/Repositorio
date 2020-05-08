@@ -34,12 +34,9 @@ public class InicioController {
     private ImageView fotoLogo;
     @FXML
     private Label textUser;
-    
-    private ProyectoGIATController pg = new ProyectoGIATController();
 
     private void initialize(){
-        String user = pg.getNombre();
-        textUser.setText(textUser.getText()+" "+user);
+        System.out.println("klk");
     }
 
 }
