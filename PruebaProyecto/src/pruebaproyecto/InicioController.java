@@ -36,7 +36,11 @@ public class InicioController {
     private Label textUser;
 
     private void initialize(){
-        System.out.println("klk");
+        
+    }
+    
+    public void ponerNombre(String nombreUser){
+        textUser.setText(textUser.getText()+" "+nombreUser);
     }
 
 }
