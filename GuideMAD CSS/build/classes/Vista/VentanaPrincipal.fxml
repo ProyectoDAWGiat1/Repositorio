@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="728.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.Controlador">
+    <children>
+      <ImageView fitHeight="737.0" fitWidth="1211.0" layoutX="-14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/wallpaper.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="492.0" layoutX="178.0" layoutY="32.0" stroke="BLACK" strokeType="INSIDE" width="956.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#9cc0ff" />
+                  <Stop color="#6bb8ff" offset="0.024054982817869414" />
+                  <Stop color="#6bbaff" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="17.0" layoutX="940.0" layoutY="694.0" stroke="BLACK" strokeType="INSIDE" width="131.0" />
+      <Label fx:id="estConexion" layoutX="966.0" layoutY="695.0" stylesheets="@../CSS/title.css" text="ESTADO CONEXION" />
+      <TableView fx:id="tablaActividades" layoutX="186.0" layoutY="83.0" prefHeight="356.0" prefWidth="941.0" stylesheets="@../CSS/title.css">
+        <columns>
+          <TableColumn fx:id="colIdAct" prefWidth="75.0" text="idActividad" />
+          <TableColumn fx:id="colNombre" prefWidth="218.0" text="nombre" />
+            <TableColumn fx:id="colDescrip" prefWidth="287.0" text="descripcion" />
+            <TableColumn fx:id="colURL" minWidth="0.0" prefWidth="138.0" text="url" />
+            <TableColumn fx:id="colImagen" prefWidth="131.0" text="imagen" />
+            <TableColumn fx:id="colIdSubt" prefWidth="73.0" text="idSubtipo" />
+        </columns>
+      </TableView>
+      <Label fx:id="textAct" layoutX="584.0" layoutY="41.0" styleClass="text" stylesheets="@../CSS/titleBold.css" text="Actividades">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Button fx:id="addToPack" layoutX="186.0" layoutY="455.0" mnemonicParsing="false" onAction="#addToPack" prefHeight="56.0" prefWidth="211.0" stylesheets="@../CSS/title.css" text="Añadir actividad/es al pack">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/plus.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="crearAct" layoutX="428.0" layoutY="455.0" mnemonicParsing="false" onAction="#abrirVentanaCrear" prefHeight="56.0" prefWidth="140.0" stylesheets="@../CSS/title.css" text="Crear actividad">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/plus.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="packToDB" layoutX="594.0" layoutY="455.0" mnemonicParsing="false" onAction="#PackABD" prefHeight="56.0" prefWidth="153.0" stylesheets="@../CSS/title.css" text="Añadir pack a BD">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/plus.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="eliminarAct" layoutX="776.0" layoutY="455.0" mnemonicParsing="false" onAction="#abrirVentanaBorrar" prefHeight="56.0" prefWidth="153.0" stylesheets="@../CSS/title.css" text="Eliminar actividad">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/minus.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="actualizarAct" layoutX="953.0" layoutY="455.0" mnemonicParsing="false" onAction="#actualizarActs" prefHeight="56.0" prefWidth="174.0" stylesheets="@../CSS/title.css" text="Actualizar actividades">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/update.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="textPack" layoutX="178.0" layoutY="555.0" prefHeight="32.0" prefWidth="153.0" styleClass="text" stylesheets="@../CSS/titleBold.css" text="PACK num:">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="172.0" fitWidth="153.0" layoutX="11.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/logo.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="textImporte" layoutX="776.0" layoutY="550.0" text="IMPORTE PACK:">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="importePack" alignment="CENTER" layoutX="780.0" layoutY="604.0" prefHeight="45.0" prefWidth="227.0" textAlignment="CENTER">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="textIDPack" layoutX="331.0" layoutY="555.0" prefHeight="36.0" prefWidth="108.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

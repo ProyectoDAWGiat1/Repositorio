@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="GuideMAD.jnlp">
+  <information>
+    <title>GuideMAD</title>
+    <vendor>Cosmin</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="GuideMAD.jar" size="2521967" download="eager" />
+    <jar href="lib\mysql-connector-java-8.0.19.jar" size="2356711" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="Vista.Main"  name="GuideMAD" />
+  <update check="always"/>
+</jnlp>

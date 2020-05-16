@@ -72,7 +72,7 @@ public class ProyectoGIATController implements Initializable {
             escenarioVentana.setTitle("Menú inicio");
             //CARGAMOS OTRA ESCENA(fxml) EN ESTA MISMA VENTANA
             escenarioVentana.setScene(new Scene(root));
-            inicio.ponerNombre(textoEmail.getText());
+            inicio.ponerNombre(emailInput.getText());
         } catch (IOException ex) {
             Alert alerta = new Alert(Alert.AlertType.ERROR);
             alerta.setContentText("ERROR " + ex.getMessage());
