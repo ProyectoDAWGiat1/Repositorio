@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.FechasPlazasController">
+   <children>
+      <ListView fx:id="listActsDP" layoutX="14.0" layoutY="37.0" prefHeight="177.0" prefWidth="574.0" />
+      <TextField fx:id="numPlazasField" layoutX="144.0" layoutY="237.0" />
+      <Label fx:id="textPlazas" layoutX="14.0" layoutY="239.0" text="Numero de plazas">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="fechaInicioAct" layoutX="144.0" layoutY="276.0" />
+      <Label fx:id="textInicio" layoutX="33.0" layoutY="278.0" text="Fecha inicio:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="textFinal" layoutX="36.0" layoutY="357.0" text="Fecha final:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="fechaFinalAct" layoutX="144.0" layoutY="355.0" />
+      <Label fx:id="textTitle" layoutX="211.0" layoutY="5.0" prefHeight="32.0" prefWidth="165.0" text="Poner fecha y plazas:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="aplicarDetalles" layoutX="415.0" layoutY="337.0" mnemonicParsing="false" onAction="#aplicarDetalles" text="Aplicar detalles">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="textPrecio" layoutX="428.0" layoutY="227.0" text="Precio actividad:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="precioActDP" layoutX="408.0" layoutY="247.0" />
+      <Label fx:id="textHoraInicio" layoutX="38.0" layoutY="317.0" text="Hora inicio">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="horaInicio" layoutX="123.0" layoutY="315.0" prefHeight="25.0" prefWidth="81.0" />
+      <Label fx:id="textHoraFin" layoutX="231.0" layoutY="319.0" text="Hora final">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="horaFinal" layoutX="318.0" layoutY="317.0" prefHeight="25.0" prefWidth="81.0" />
+   </children>
+</AnchorPane>

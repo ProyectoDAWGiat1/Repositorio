@@ -65,11 +65,14 @@ public class ProyectoGIATController implements Initializable {
             //CARGAMOS OTRO FXML
             loader.setLocation(getClass().getResource("/scenes/MenuInicioIniciado.fxml"));
             Parent root = loader.load(); // el metodo initialize() se ejecuta
-
+            
+            InicioController inicio = loader.getController();
+            
             Stage escenarioVentana = (Stage) iniciarSesion.getScene().getWindow();
             escenarioVentana.setTitle("Menú inicio");
             //CARGAMOS OTRA ESCENA(fxml) EN ESTA MISMA VENTANA
             escenarioVentana.setScene(new Scene(root));
+            inicio.ponerNombre(emailInput.getText());
         } catch (IOException ex) {
             Alert alerta = new Alert(Alert.AlertType.ERROR);
             alerta.setContentText("ERROR " + ex.getMessage());
